@@ -1,0 +1,84 @@
+.services-section {
+  background-color: #eaf4f4;
+  padding: 50px 20px;
+  text-align: center;
+  color: #1a3c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-section h2, .services-section p {
+  backdrop-filter: blur(10px); /* Blur effect */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 5px; /* Space between h2 and p */
+  width: 100%; /* Full width for responsiveness */
+  max-width: 600px; /* Limit max width for readability */
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+}
+
+.services-section p {
+  font-size: 1rem;
+  margin-bottom: 30px; /* Space between p and service boxes */
+  color: #081c12;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.service-box {
+  background: #d79701e5; /* Semi-transparent black background */
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 10px 10px #f4f4f54d;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for effect */
+}
+
+.service-box:hover {
+  transform: scale(1.05); /* Slight scale up on hover */
+  box-shadow: 0 15px 20px #74ab96; /* Enhanced shadow on hover */
+}
+
+.service-box:active {
+  transform: scale(0.95); /* Slight scale down on click */
+  box-shadow: 0 5px 10px #74ab96; /* Shadow effect on click */
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #748CAB; 
+}
+
+.service-box h3 {
+  font-size: 1.2rem;
+  color: #081c15; 
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 0.9rem;
+  color: #1b4332;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-box {
+    width: 100%;
+    max-width: 300px;
+  }
+}

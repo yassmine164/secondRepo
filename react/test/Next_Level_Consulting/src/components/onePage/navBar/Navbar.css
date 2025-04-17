@@ -1,0 +1,170 @@
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fefae0;
+  box-shadow: 0 2px 10px #dda25e4d;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #386641;
+  text-decoration: none;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a, .nav-links .link {
+  text-decoration: none;
+  color: #386641;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a.active,
+.nav-links .active {
+  color: #386641;
+  position: relative;
+}
+
+.nav-links a.active::after,
+.nav-links .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #386641;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .link:hover {
+  color: #081c15;
+}
+
+/* Mobile Toggle Button */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #386641;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: #fefae0;
+  padding: 2rem;
+  box-shadow: 0 2px 10px #dda25e4d;
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  transform: translateY(-150%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+}
+
+.mobile-menu a, .mobile-menu .link {
+  text-decoration: none;
+  color: #386641;
+  padding: 0.75rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a.active,
+.mobile-menu .active {
+  background: #fefae0;
+  color: #3a5a40;
+}
+
+.mobile-menu a.active::after,
+.mobile-menu .active::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 0.75rem;
+  right: 0.75rem;
+  height: 2px;
+  background: #386641;
+}
+
+.mobile-menu a:hover {
+  color: #081c15;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Scrolled State */
+.navbar.scrolled {
+  box-shadow: 0 2px 15px #0000001a;
+  backdrop-filter: blur(12px);
+}
+
+/* Ensure content doesn't hide behind navbar */
+main {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 60px;
+  }
+}

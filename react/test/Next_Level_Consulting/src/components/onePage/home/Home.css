@@ -1,0 +1,145 @@
+/* Home Component Styles */
+.home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Side-by-side layout */
+    align-items: center;
+    justify-content: space-between; /* Space content and image evenly */
+    background-color: #1a3c34; /* Dark teal background */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.slideshow-background {
+    position: absolute;
+    top: 0;
+    right: 0; /* Positioned on the right */
+    width: 50%; /* Half the screen width */
+    height: 100vh;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover; /* Covers the right section fully */
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 0;
+    border-radius: 10%;
+}
+
+.dots-overlay {
+    position: absolute;
+    top: 25%;         
+    bottom: 25%;       
+    left: 88%;        
+    right: 0;          
+    z-index: 2;         
+    pointer-events: none; 
+    
+    /* Dot pattern */
+    background: 
+    radial-gradient(circle at 60% 40%, #f4c430 3px, transparent 3px),
+    radial-gradient(circle at 70% 50%, #f4c430 3px, transparent 3px),
+    radial-gradient(circle at 50% 55%, #f4c430 3px, transparent 3px);
+    background-size: 40px 30px; /* Dot spacing */
+    opacity: 0.6;
+  }
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: left; /* Left-aligned text */
+    color: #fff;
+    width: 50%; /* Half the screen width */
+    margin-left: 5%; /* Spacing from the left edge */
+    margin-top: 3%;
+}
+
+.content h1 {
+    font-size: 3rem; /* Balanced size */
+    color: #f4c430; /* Yellow for contrast */
+    text-shadow: none; /* Cleaner look */
+    margin: 5% 0 15% -5% ;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #fff; /* White for readability */
+    margin-top: 20px;
+    text-shadow: none; /* Cleaner look */
+    margin: -10% 10% 25px -5%;
+}
+.chatbot-button {
+    background: #f4c430; /* Yellow background */
+    color: #1a3c34; /* Dark teal text for contrast */
+    border: 2px solid #1a3c34; /* Add a border for better visibility */
+}
+
+.chatbot-button:hover {
+    background: #e5b828; 
+    color: #fff; 
+    transform: translateY(-2px);
+}
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    #chatbot-root {
+      width: 100%;
+      height: 70vh;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stack vertically on mobile */
+    }
+
+    .content {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .slideshow-background {
+        width: 100%;
+        height: 50vh; /* Reduced height for mobile */
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+
+    .slide {
+        height: 50vh;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}

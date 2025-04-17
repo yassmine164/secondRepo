@@ -1,0 +1,176 @@
+.aboutus-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Blurred Background using a Pixabay image */
+  .aboutus-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    filter: blur(8px);
+    transform: scale(1.1);
+    z-index: -1;
+  }
+  
+  .aboutus-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .aboutus-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  /* Add hover effect for the image */
+  .aboutus-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.3s ease-in-out;
+  }
+  .aboutus-right {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .aboutus-right h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1a3c34;
+    text-shadow: none;
+  }
+  
+  .aboutus-right p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #155445;
+    margin-right: 10%;
+  }
+  
+/* Message Us Section */
+.message-us {
+  margin-top: 30px;
+  padding: 30px;
+  background: linear-gradient(135deg, #1a3c34, #155445); /* Gradient background */
+  color: #fff;
+  border-radius: 15px; /* Softer rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto; /* Center the section */
+}
+
+.message-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f4f4f4; /* Light gray text */
+  text-transform: uppercase; /* Make the title uppercase */
+  letter-spacing: 1px; /* Add spacing between letters */
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Larger gap between form elements */
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f4f4f4; /* Light background for inputs */
+  color: #333; /* Dark text for readability */
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(26, 60, 52, 0.8); /* Glow effect on focus */
+}
+
+.message-form textarea {
+  resize: none; /* Disable resizing */
+}
+
+.message-form button {
+  padding: 15px;
+  background-color: #f4f4f4; /* Light gray button */
+  color: #1a3c34; /* Dark teal text */
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.message-form button:hover {
+  background-color: #155445; /* Darker teal on hover */
+  color: #fff;
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .message-us {
+    padding: 20px;
+  }
+
+  .message-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .message-form input,
+  .message-form textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .message-form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+  @media (max-width: 768px) {
+    .aboutus-container {
+      flex-direction: column; /* Stack sections vertically */
+      padding: 30px 15px;
+    }
+  
+    .aboutus-left,
+    .aboutus-right {
+      max-width: 100%;
+    }
+  
+    .aboutus-right h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .aboutus-right p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  }
+  
